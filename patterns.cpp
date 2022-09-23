@@ -123,19 +123,241 @@ int main()
     //     i++;
     // }
 
-    // Pattern 5                            1
+    // Pattern 6                            1
     //                                      2 2
     //                                      3 3 3
     //                                      4 4 4 4
     //                                      5 5 5 5 5
     // When n == 5
 
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     while (j <= i)
+    //     {
+    //         cout << i;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 7                            1
+    //                                      2 3
+    //                                      4 5 6
+    //                                      7 8 9 10
+    //                                      11 12 13 14 15
+    // When n == 5
+
+    // int count = 1;
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     while (j <= i)
+    //     {
+    //         cout << count << " ";
+    //         count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 8                            1
+    //                                      2 3
+    //                                      3 4 5
+    //                                      4 5 6 7
+    //                                      5 6 7 8 9
+    // When n == 5
+
+    // Using Count variable
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     int count = i;
+    //     while (j <= i)
+    //     {
+    //         cout << count << " ";
+    //         count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Without Using Count Variable
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     // int count = i;
+    //     while (j <= i)
+    //     {
+    //         cout << i+j-1 << " ";
+    //         // count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 9                            1
+    //                                      2 1
+    //                                      3 2 1
+    //                                      4 3 2 1
+    //                                      5 4 3 2 1
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     // int count = i;
+    //     while (j <= i)
+    //     {
+    //         cout << i - j + 1 << " ";
+    //         // count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 10                           A A A A A
+    //                                      B B B B B
+    //                                      C C C C C
+    //                                      D D D D D
+    //                                      E E E E E
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+
+    //     while (j <= n)
+    //     {
+    //         cout << char('A' + i - 1) << " ";
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 11                           A B C D E
+    //                                      A B C D E
+    //                                      A B C D E
+    //                                      A B C D E
+    //                                      A B C D E
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+
+    //     while (j <= n)
+    //     {
+    //         cout << char('A' + j - 1) << " ";
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 12                           A B C D E
+    //                                      F G H I J
+    //                                      K L M N O
+    //                                      P Q R S T
+    //                                      U V W X Y
+    // When n == 5
+
+    // int count = 1;
+    // while (i <= n)
+    // {
+    //     int j = 1;
+
+    //     while (j <= n)
+    //     {
+    //         cout << char('A' + count - 1) << " ";
+    //         count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 13                           A B C D E
+    //                                      C D E F G
+    //                                      E F G H I
+    //                                      G H I J K
+    //                                      I J K L M
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     int count = i;
+
+    //     while (j <= n)
+    //     {
+    //         cout << char('A' + count - 1) << " ";
+    //         count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Another way to solve the same problem
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     while (j <= n)
+    //     {
+    //         cout << char('A' + i + j - 2) << " ";
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 14                           A
+    //                                      B B
+    //                                      C C C
+    //                                      D D D D
+    //                                      E E E E E
+    // When n == 5
+
+    // int count = 1;
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     while (j <= i)
+    //     {
+    //         char ch = 'A' + count - 1;
+    //         cout << ch << " ";
+    //         count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 15                           A
+    //                                      B C
+    //                                      C D E
+    //                                      D E F G
+    //                                      E F G H I
+    // When n == 5
+
     while (i <= n)
     {
         int j = 1;
+        // int count = 1;
         while (j <= i)
         {
-            cout << i;
+            char ch = 'A' + i + j - 2;
+            cout << ch << " ";
+            // count++;
             j++;
         }
         cout << endl;
