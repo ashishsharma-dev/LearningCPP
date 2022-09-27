@@ -349,16 +349,145 @@ int main()
     //                                      E F G H I
     // When n == 5
 
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     // int count = 1;
+    //     while (j <= i)
+    //     {
+    //         char ch = 'A' + i + j - 2;
+    //         cout << ch << " ";
+    //         // count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 16                           E
+    //                                      D E
+    //                                      C D E
+    //                                      B C D E
+    //                                      A B C D E
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     int j = 1;
+    //     // int count = 1;
+    //     while (j <= i)
+    //     {
+    //         char ch = 'A' + n - i + j - 1;
+    //         cout << ch << " ";
+    //         // count++;
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 16                            *
+    //                                     * *
+    //                                   * * *
+    //                                 * * * *
+    //                               * * * * *
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     // Printing spaces
+    //     int space = n - i;
+    //     while (space)
+    //     {
+    //         cout << " ";
+    //         space--;
+    //     }
+    //     // Printing stars
+    //     int j = 1;
+    //     while (j <= i)
+    //     {
+    //         cout << '*';
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 17                            * * * * *
+    //                                       * * * *
+    //                                       * * *
+    //                                       * *
+    //                                       *
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     // Printing stars
+    //     int j = 1;
+    //     while (j <= (n - i + 1))
+    //     {
+    //         cout << '*';
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 18                          * * * * *
+    //                                       * * * *
+    //                                         * * *
+    //                                           * *
+    //                                             *
+    // When n == 5
+
+    // while (i <= n)
+    // {
+    //     // Printing spaces
+    //     int space = i - 1;
+    //     while (space)
+    //     {
+    //         cout << " ";
+    //         space--;
+    //     }
+    //     // Printing stars
+    //     int j = 1;
+    //     while (j <= (n - i + 1))
+    //     {
+    //         cout << '*';
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 19                                   1
+    //                                            1 2 1
+    //                                          1 2 3 2 1
+    //                                        1 2 3 4 3 2 1
+    //                                      1 2 3 4 5 4 3 2 1
+    // When n == 5
+
     while (i <= n)
     {
+        // Printing spaces
+        int space = n - i;
+        while (space)
+        {
+            cout << " ";
+            space--;
+        }
+        // Printing stars
         int j = 1;
-        // int count = 1;
         while (j <= i)
         {
-            char ch = 'A' + i + j - 2;
-            cout << ch << " ";
-            // count++;
+            cout << j;
             j++;
+        }
+        int k = j - 2;
+        while (k >= 1)
+        {
+            cout << k;
+            k--;
         }
         cout << endl;
         i++;
