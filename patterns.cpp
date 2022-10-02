@@ -15,17 +15,17 @@ int main()
     //                                      * * * * *
     //                                      * * * * *
 
-    // while (i <= n)
-    // {
-    //     int j = 1;
-    //     while (j <= n)
-    //     {
-    //         cout << "*";
-    //         j++;
-    //     }
-    //     cout << endl;
-    //     i++;
-    // }
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= n)
+        {
+            cout << "*";
+            j++;
+        }
+        cout << endl;
+        i++;
+    }
 
     // Pattern 2                            1 1 1 1 1
     //                                      2 2 2 2 2
@@ -467,27 +467,64 @@ int main()
     //                                      1 2 3 4 5 4 3 2 1
     // When n == 5
 
+    // while (i <= n)
+    // {
+    //     // Printing spaces
+    //     int space = n - i;
+    //     while (space)
+    //     {
+    //         cout << " ";
+    //         space--;
+    //     }
+    //     // Printing stars
+    //     int j = 1;
+    //     while (j <= i)
+    //     {
+    //         cout << j;
+    //         j++;
+    //     }
+    //     int k = j - 2;
+    //     while (k >= 1)
+    //     {
+    //         cout << k;
+    //         k--;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+
+    // Pattern 20                          1 2 3 4 5 5 4 3 2 1
+    //                                     1 2 3 4 * * 4 3 2 1
+    //                                     1 2 3 * * * * 3 2 1
+    //                                     1 2 * * * * * * 2 1
+    //                                     1 * * * * * * * * 1
+    // When n == 5
+
     while (i <= n)
     {
-        // Printing spaces
-        int space = n - i;
-        while (space)
-        {
-            cout << " ";
-            space--;
-        }
-        // Printing stars
+        // Printing first
         int j = 1;
-        while (j <= i)
+        while (j <= (n - i + 1))
         {
-            cout << j;
+            cout << j << " ";
             j++;
         }
-        int k = j - 2;
-        while (k >= 1)
+
+        // Printing stars (second)
+        int stars = 3;
+        while (stars <= i * 2)
         {
-            cout << k;
-            k--;
+            cout << '*' << " ";
+            stars++;
+        }
+
+        // Printing third
+
+        int third = n - i + 1;
+        while (third >= 1)
+        {
+            cout << third << " ";
+            third--;
         }
         cout << endl;
         i++;
